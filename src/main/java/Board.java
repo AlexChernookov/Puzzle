@@ -5,13 +5,16 @@ public class Board {
 
     // construct a board from an n-by-n array of blocks
     // (where blocks[i][j] = block in row i, column j)
+    private int[][] tiles;
+    private final int n;
     public Board(int[][] blocks) {
-
+        this.n = blocks.length;
+        this.tiles = blocks;
     }
 
     // board dimension n
     public int dimension() {
-        return 0;
+        return n;
     }
 
     // number of blocks out of place

@@ -28,12 +28,25 @@
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 
+import java.io.File;
+
 public class PuzzleChecker {
 
     public static void main(String[] args) {
 
+        final String sep = File.separator;
+        final String userDir = System.getProperty("user.dir");
+        final String RESOURCES_PATH = userDir + sep +"src" + sep + "main" + sep + "resources";
+        String file1 = RESOURCES_PATH + sep + "puzzle00.txt";
+        String file2 = RESOURCES_PATH + sep + "puzzle01.txt";
+        String file3 = RESOURCES_PATH + sep + "puzzle02.txt";
+
+        String[] a = new String[3];
+        a[0] = file1;
+        a[1] = file2;
+        a[2] = file3;
         // for each command-line argument
-        for (String filename : args) {
+        for (String filename : a) {
 
             // read in the board specified in the filename
             In in = new In(filename);
